@@ -1,0 +1,35 @@
+# ── Web framework ─────────────────────────────────────────────────────────────
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+python-multipart==0.0.12
+
+# ── Database ──────────────────────────────────────────────────────────────────
+sqlalchemy[asyncio]==2.0.36
+asyncpg==0.30.0
+alembic==1.14.0
+
+# ── Validation ────────────────────────────────────────────────────────────────
+pydantic==2.10.3
+pydantic[email]==2.10.3
+pydantic-settings==2.6.1
+
+# ── Auth ──────────────────────────────────────────────────────────────────────
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.2.1
+
+# ── QR code generation ────────────────────────────────────────────────────────
+qrcode[pil]==8.0
+pillow==11.0.0
+
+# ── Background tasks ──────────────────────────────────────────────────────────
+celery==5.4.0
+redis==5.2.0
+
+# ── Storage ───────────────────────────────────────────────────────────────────
+boto3==1.35.74      # for S3 / Cloudflare R2
+
+# ── Dev / testing ─────────────────────────────────────────────────────────────
+pytest==8.3.4
+pytest-asyncio==0.24.0
+httpx==0.28.0       # async test client for FastAPI
