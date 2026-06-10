@@ -156,4 +156,6 @@ async def upload_product_image(
 
     url = await upload_file(file, folder=f"products/{business.id}")
     product.image_url = url
+    await db.commit()
+    await db.refresh(product)
     return APIResponse.ok({"image_url": url})
